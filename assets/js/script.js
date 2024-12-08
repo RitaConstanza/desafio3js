@@ -1,7 +1,8 @@
-const cambiarColor = document.getElementById('ele1')
-cambiarColor.style.fontSize = '40px';
-cambiarColor.style.backgroundColor = 'green';
-
-cambiarColor.addEventListener('click', () => {
-    cambiarColor.style.backgroundColor = 'yellow';
-})
+const pintar = function(element, color = "green") {
+    element.style.backgroundColor = color;
+}
+const ele = document.getElementById("ele1");
+pintar(ele);
+ele.addEventListener("click", function() {
+    pintar(ele, "yellow");
+});
